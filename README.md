@@ -1,4 +1,4 @@
-# Sentiment-Analysis-Detecting-Food-Insecurity-Twitter
+# Sentiment Analysis in Detecting Food Insecurity Risk Among Twitter Users
 Empowering social impact through real-time sentiment analysis on Twitter. Uncover insights into food insecurity risks, bridging technology and humanitarian efforts. 
 
 
