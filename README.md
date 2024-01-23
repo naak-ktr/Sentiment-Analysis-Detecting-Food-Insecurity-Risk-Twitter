@@ -1,5 +1,24 @@
 # Sentiment Analysis in Detecting Food Insecurity Risk Among Twitter Users
-Empowering social impact through real-time sentiment analysis on Twitter. Uncover insights into food insecurity risks, bridging technology and humanitarian efforts. 
+
+## Tackling Food Insecurity with Twitter Sentiment Analysis: A Machine Learning Approach 
+
+This project demonstrates the power of data-driven approaches in tackling food insecurity. By analyzing online sentiments, we can gain valuable insights to guide effective interventions and ultimately alleviate this critical issue.
+
+## Method
+
+## 1) Data Collection
+I used Python's Snscrape module and RapidMiner to retrieve tweets containing keywords associated with food insecurity in Malaysia. 
+
+## 2) Data Preprocessing
+
+
+3. Sentiment Analysis:
+
+Employed three lexicon-based approaches:
+TextBlob
+VADER
+A novel "Harmonized" lexicon, combining the strengths of TextBlob and VADER
+Captured sentiment patterns within tweets to assess food security sentiment.
 
 
 
