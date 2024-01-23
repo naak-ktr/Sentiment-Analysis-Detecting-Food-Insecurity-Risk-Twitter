@@ -13,10 +13,10 @@ I used Python's Snscrape module and RapidMiner to retrieve tweets containing key
 ### 2) Lexicon-Based Sentiment Analysis
 Employed three lexicon-based approaches to capture sentiment patterns within tweets:
 
-    1. TextBlob
-    2. VADER
-    3. Harmonized Lexicon 
-      (A novel lexicon created by combining TextBlob and VADER scores with domain-specific food insecurity terms)
+1. TextBlob
+2. VADER
+3. Harmonized Lexicon 
+   (A novel lexicon created by combining TextBlob and VADER scores with domain-specific food insecurity terms)
 
 From here, the tweets dataset was categorized as positive or negative based on overall sentiment score extracted from each lexicon.
 
