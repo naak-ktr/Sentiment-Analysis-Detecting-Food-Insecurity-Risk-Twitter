@@ -1,5 +1,5 @@
 # Sentiment Analysis in Detecting Food Insecurity Risk Among Twitter Users
-[![Python](https://img.shields.io/badge/Python-3.10-blue)](https://www.python.org/) [![RapidMiner](https://img.shields.io/badge/RapidMiner-9.10.11.0-orange)](https://altair.com/altair-rapidminer) [![RapidMiner](https://img.shields.io/badge/RapidMiner-9.10.11.0-orange)](https://altair.com/altair-rapidminer)
+[![Python](https://img.shields.io/badge/Python-3.10-blue)](https://www.python.org/) [![RapidMiner](https://img.shields.io/badge/RapidMiner-9.10.11.0-orange)](https://altair.com/altair-rapidminer)
 
 ![Thumbnail](https://github.com/naak-ktr/Sentiment-Analysis-Detecting-Food-Insecurity-Risk-Twitter/assets/89067111/6acae4b6-7d19-4cf0-9253-c982530705c4)
 
