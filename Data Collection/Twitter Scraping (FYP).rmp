@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><process version="9.10.013">
+  <context>
+    <input/>
+    <output/>
+    <macros/>
+  </context>
+  <operator activated="true" class="process" compatibility="9.10.013" expanded="true" name="Process">
+    <parameter key="logverbosity" value="init"/>
+    <parameter key="random_seed" value="2001"/>
+    <parameter key="send_mail" value="never"/>
+    <parameter key="notification_email" value=""/>
+    <parameter key="process_duration_for_mail" value="30"/>
+    <parameter key="encoding" value="SYSTEM"/>
+    <process expanded="true">
+      <operator activated="true" class="social_media:search_twitter" compatibility="9.6.000" expanded="true" height="82" name="Search Twitter" width="90" x="179" y="85">
+        <parameter key="connection_source" value="repository"/>
+        <parameter key="connection_entry" value="/Connections/Twitter2021"/>
+        <parameter key="query" value="makanan mahal"/>
+        <parameter key="result_type" value="recent or popular"/>
+        <parameter key="limit" value="1000"/>
+        <parameter key="language" value="id"/>
+        <parameter key="until" value="2023.03.31 22:27:31 +0800"/>
+        <parameter key="filter_by_geo_location" value="true"/>
+        <parameter key="latitude" value="4.2105"/>
+        <parameter key="longitude" value="101.9758"/>
+        <parameter key="radius" value="1000.0"/>
+        <parameter key="radius_unit" value="kilometers"/>
+      </operator>
+      <operator activated="true" class="remove_duplicates" compatibility="9.10.013" expanded="true" height="103" name="Remove Duplicates" width="90" x="313" y="85">
+        <parameter key="attribute_filter_type" value="all"/>
+        <parameter key="attribute" value=""/>
+        <parameter key="attributes" value=""/>
+        <parameter key="use_except_expression" value="false"/>
+        <parameter key="value_type" value="attribute_value"/>
+        <parameter key="use_value_type_exception" value="false"/>
+        <parameter key="except_value_type" value="time"/>
+        <parameter key="block_type" value="attribute_block"/>
+        <parameter key="use_block_type_exception" value="false"/>
+        <parameter key="except_block_type" value="value_matrix_row_start"/>
+        <parameter key="invert_selection" value="false"/>
+        <parameter key="include_special_attributes" value="false"/>
+        <parameter key="treat_missing_values_as_duplicates" value="false"/>
+      </operator>
+      <operator activated="true" class="write_excel" compatibility="9.10.013" expanded="true" height="103" name="Write Excel" width="90" x="447" y="136">
+        <parameter key="excel_file" value="C:/Users/LENOVO/Documents/Degree Life/FYP Journey/Dataset/RapidMiner Scraping/Expensive food/Makanan mahal Tweets Rapdiminer (Malay) - 26 March - 31 March.xlsx"/>
+        <parameter key="file_format" value="xlsx"/>
+        <enumeration key="sheet_names">
+          <parameter key="sheet_name_element" value="Week ${week_number}"/>
+        </enumeration>
+        <parameter key="sheet_name" value="RapidMiner Data"/>
+        <parameter key="date_format" value="yyyy-MM-dd"/>
+        <parameter key="number_format" value="#"/>
+        <parameter key="encoding" value="UTF-8"/>
+      </operator>
+      <connect from_op="Search Twitter" from_port="output" to_op="Remove Duplicates" to_port="example set input"/>
+      <connect from_op="Remove Duplicates" from_port="example set output" to_op="Write Excel" to_port="input"/>
+      <connect from_op="Write Excel" from_port="through" to_port="result 1"/>
+      <portSpacing port="source_input 1" spacing="0"/>
+      <portSpacing port="sink_result 1" spacing="0"/>
+      <portSpacing port="sink_result 2" spacing="0"/>
+    </process>
+  </operator>
+</process>
